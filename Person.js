@@ -1,17 +1,17 @@
-class person {
-    constructor(name,age,sex,nationality,EducationQualification,designation){
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-        this.nationality = nationality;
-        this.educationqualification= EducationQualification ;  
-        this.designation  = designation;
+//Write a “person” class to hold all the details.
+class Person {
+    constructor(name, age, gender) {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
     }
-    get Person(){
-        return "Name: "+P.name+" Age: "+P.age+" Sex: "+P.sex+" Nationality: "+P.nationality+"Education: "+P.educationqualification+" Designation: "+P.designation;
+  
+    getDetails() {
+      return `Name: ${this.name}, Age: ${this.age}, Gender: ${this.gender}`;
     }
-}
-
-var P = new person("Manikandan","26","Male","Indian","MCA","FSD");
-
-console.log(P.Person);
+  }
+  
+  // Usage:
+  const person1 = new Person('Manikandan', 27, 'Male');
+  console.log(person1.getDetails()); // Output: Name: Manikandan, Age: 27, Gender: Male
+  
